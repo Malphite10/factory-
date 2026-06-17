@@ -422,11 +422,13 @@ When adding a new agent:
 5. Update `approved-sources.json` with any new dependencies
 6. Run validation: `npm run validate-schemas`
 7. Test with sample input: `npm run test-workflow -- agents/NN-agent-name.md < sample.json`
+8.
 
 ## License & Support
 
 This repository is the single source of truth for all multi-agent workflows. Questions? Check the agent markdown files — they document everything.
-https://github.com/Malphite10/factory-.git
+
+CO-Auth--https://github.com/Malphite10/factory-.git
 ---
 
 **The key insight**: When agents can only communicate through immutable, validated handoff packages, failures are caught early, workflows are deterministic, and production is secure by construction.
