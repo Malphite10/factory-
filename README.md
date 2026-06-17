@@ -426,7 +426,7 @@ When adding a new agent:
 ## License & Support
 
 This repository is the single source of truth for all multi-agent workflows. Questions? Check the agent markdown files — they document everything.
-
+https://github.com/Malphite10/factory-.git
 ---
 
 **The key insight**: When agents can only communicate through immutable, validated handoff packages, failures are caught early, workflows are deterministic, and production is secure by construction.
