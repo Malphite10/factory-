@@ -1,0 +1,88 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Build Package (Builder Agent)",
+  "type": "object",
+  "required": [
+    "agent",
+    "inputs",
+    "outputs",
+    "handoff",
+    "blockers"
+  ],
+  "properties": {
+    "agent": {
+      "const": "06-builder"
+    },
+    "version": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "inputs": {
+      "type": "object",
+      "required": [
+        "design_package",
+        "github_approval"
+      ],
+      "properties": {
+        "design_package": {
+          "type": "object"
+        },
+        "github_approval": {
+          "type": "object"
+        }
+      }
+    },
+    "tasks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "outputs": {
+      "type": "object",
+      "required": [
+        "source_code_url",
+        "component_status",
+        "build_artifacts"
+      ],
+      "properties": {
+        "source_code_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "component_status": {
+          "type": "object"
+        },
+        "build_artifacts": {
+          "type": "array"
+        },
+        "deployment_instructions": {
+          "type": "string"
+        },
+        "performance_metrics": {
+          "type": "object"
+        }
+      }
+    },
+    "handoff": {
+      "type": "object",
+      "required": [
+        "next_agent"
+      ],
+      "properties": {
+        "next_agent": {
+          "const": "07-integration"
+        },
+        "ready_for_integration": {
+          "type": "boolean"
+        }
+      }
+    },
+    "blockers": {
+      "type": "array"
+    }
+  }
+}

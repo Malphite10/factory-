@@ -1,0 +1,109 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Opportunity Report (Creative Director)",
+  "type": "object",
+  "required": [
+    "agent",
+    "inputs",
+    "outputs",
+    "handoff",
+    "blockers"
+  ],
+  "properties": {
+    "agent": {
+      "const": "00-creative-director"
+    },
+    "version": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "inputs": {
+      "type": "object",
+      "required": [
+        "strategy",
+        "timeline"
+      ],
+      "properties": {
+        "strategy": {
+          "type": "string",
+          "minLength": 1
+        },
+        "timeline": {
+          "type": "string",
+          "enum": [
+            "Q1",
+            "Q2",
+            "Q3",
+            "Q4",
+            "urgent"
+          ]
+        },
+        "budget": {
+          "type": "number",
+          "minimum": 0
+        }
+      }
+    },
+    "tasks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "outputs": {
+      "type": "object",
+      "required": [
+        "brief",
+        "target_audience",
+        "success_criteria"
+      ],
+      "properties": {
+        "brief": {
+          "type": "string",
+          "minLength": 10
+        },
+        "target_audience": {
+          "type": "string"
+        },
+        "success_criteria": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "tone": {
+          "type": "string"
+        },
+        "visual_direction": {
+          "type": "string"
+        }
+      }
+    },
+    "handoff": {
+      "type": "object",
+      "required": [
+        "next_agent"
+      ],
+      "properties": {
+        "next_agent": {
+          "const": "01-research"
+        },
+        "required_approvals": {
+          "type": "array"
+        },
+        "sla": {
+          "type": "string"
+        }
+      }
+    },
+    "blockers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Design Package (Design Agent)",
+  "type": "object",
+  "required": [
+    "agent",
+    "inputs",
+    "outputs",
+    "handoff",
+    "blockers"
+  ],
+  "properties": {
+    "agent": {
+      "const": "03-design"
+    },
+    "version": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "inputs": {
+      "type": "object",
+      "required": [
+        "product_spec"
+      ],
+      "properties": {
+        "product_spec": {
+          "type": "object"
+        },
+        "design_system_version": {
+          "type": "string"
+        }
+      }
+    },
+    "tasks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "outputs": {
+      "type": "object",
+      "required": [
+        "figma_url",
+        "design_tokens",
+        "component_inventory",
+        "responsive_breakpoints"
+      ],
+      "properties": {
+        "figma_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "design_tokens": {
+          "type": "object"
+        },
+        "component_inventory": {
+          "type": "array"
+        },
+        "responsive_breakpoints": {
+          "type": "object"
+        },
+        "accessibility_notes": {
+          "type": "string"
+        }
+      }
+    },
+    "handoff": {
+      "type": "object",
+      "required": [
+        "next_agent"
+      ],
+      "properties": {
+        "next_agent": {
+          "const": "05-github-supply-chain"
+        },
+        "design_system_compliance": {
+          "type": "boolean"
+        }
+      }
+    },
+    "blockers": {
+      "type": "array"
+    }
+  }
+}

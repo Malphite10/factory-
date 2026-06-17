@@ -1,0 +1,83 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Launch Package (Launch Agent)",
+  "type": "object",
+  "required": [
+    "agent",
+    "inputs",
+    "outputs",
+    "handoff",
+    "blockers"
+  ],
+  "properties": {
+    "agent": {
+      "const": "10-launch"
+    },
+    "version": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "inputs": {
+      "type": "object",
+      "required": [
+        "qa_sign_off",
+        "email_campaign"
+      ],
+      "properties": {
+        "qa_sign_off": {
+          "type": "object"
+        },
+        "email_campaign": {
+          "type": "object"
+        }
+      }
+    },
+    "tasks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "outputs": {
+      "type": "object",
+      "required": [
+        "live_url",
+        "seo_metadata",
+        "og_tags",
+        "release_notes"
+      ],
+      "properties": {
+        "live_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "seo_metadata": {
+          "type": "object"
+        },
+        "og_tags": {
+          "type": "object"
+        },
+        "release_notes": {
+          "type": "string"
+        },
+        "monitoring_dashboards": {
+          "type": "array"
+        }
+      }
+    },
+    "handoff": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "const": "COMPLETE"
+        }
+      }
+    },
+    "blockers": {
+      "type": "array"
+    }
+  }
+}

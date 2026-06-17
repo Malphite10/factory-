@@ -1,0 +1,95 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Product Specification (Product Agent)",
+  "type": "object",
+  "required": [
+    "agent",
+    "inputs",
+    "outputs",
+    "handoff",
+    "blockers"
+  ],
+  "properties": {
+    "agent": {
+      "const": "02-product"
+    },
+    "version": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "inputs": {
+      "type": "object",
+      "required": [
+        "opportunity_report",
+        "research_package"
+      ],
+      "properties": {
+        "opportunity_report": {
+          "type": "object"
+        },
+        "research_package": {
+          "type": "object"
+        },
+        "constraints": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "tasks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "outputs": {
+      "type": "object",
+      "required": [
+        "information_architecture",
+        "user_flows",
+        "feature_list",
+        "cms_schema"
+      ],
+      "properties": {
+        "information_architecture": {
+          "type": "object"
+        },
+        "user_flows": {
+          "type": "array"
+        },
+        "feature_list": {
+          "type": "array",
+          "minItems": 1
+        },
+        "cms_schema": {
+          "type": "object"
+        },
+        "technical_constraints": {
+          "type": "array"
+        }
+      }
+    },
+    "handoff": {
+      "type": "object",
+      "required": [
+        "next_agent"
+      ],
+      "properties": {
+        "next_agent": {
+          "const": "03-design"
+        },
+        "design_brief": {
+          "type": "string"
+        }
+      }
+    },
+    "blockers": {
+      "type": "array"
+    }
+  }
+}

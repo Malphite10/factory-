@@ -1,0 +1,117 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "GitHub Supply Chain Approval (GitHub Supply Chain Agent)",
+  "type": "object",
+  "required": [
+    "agent",
+    "inputs",
+    "outputs",
+    "handoff",
+    "blockers"
+  ],
+  "properties": {
+    "agent": {
+      "const": "05-github-supply-chain"
+    },
+    "version": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "inputs": {
+      "type": "object",
+      "required": [
+        "design_package",
+        "dependencies_list"
+      ],
+      "properties": {
+        "design_package": {
+          "type": "object"
+        },
+        "dependencies_list": {
+          "type": "array"
+        }
+      }
+    },
+    "tasks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "outputs": {
+      "type": "object",
+      "required": [
+        "approved",
+        "security_score",
+        "maintenance_score",
+        "recommended_versions",
+        "integration_notes"
+      ],
+      "properties": {
+        "approved": {
+          "type": "boolean"
+        },
+        "repository": {
+          "type": "string"
+        },
+        "license": {
+          "type": "string"
+        },
+        "security_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "maintenance_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "dependency_review": {
+          "type": "array"
+        },
+        "license_compliance": {
+          "type": "boolean"
+        },
+        "security_issues": {
+          "type": "array"
+        },
+        "recommended_versions": {
+          "type": "object"
+        },
+        "sbom": {
+          "type": "object"
+        },
+        "integration_notes": {
+          "type": "array",
+          "minItems": 1
+        }
+      }
+    },
+    "handoff": {
+      "type": "object",
+      "required": [
+        "next_agent"
+      ],
+      "properties": {
+        "next_agent": {
+          "const": "06-builder"
+        },
+        "approval_timestamp": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "approved_until": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "blockers": {
+      "type": "array"
+    }
+  }
+}

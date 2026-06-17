@@ -1,0 +1,7 @@
+{
+  "blog": {
+    "title": "string",
+    "content": "richtext",
+    "author": "reference"
+  }
+}
