@@ -422,7 +422,7 @@ When adding a new agent:
 5. Update `approved-sources.json` with any new dependencies
 6. Run validation: `npm run validate-schemas`
 7. Test with sample input: `npm run test-workflow -- agents/NN-agent-name.md < sample.json`
-8.
+  
 
 ## License & Support
 
