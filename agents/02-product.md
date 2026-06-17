@@ -15,14 +15,6 @@ If required information is missing, return BLOCKED.
 ## INPUTS
 - Opportunity Report
 - Research Package
-
-## TASKS
-# agents/02-product/agent.md
-
-## Agent Name
-
-Product Agent
-
 ## Purpose
 
 Convert market opportunities into implementation-ready specifications.
