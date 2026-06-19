@@ -9,6 +9,7 @@ on:
 permissions:
   contents: read
 
+=======
 jobs:
   validate-supply-chain:
     runs-on: ubuntu-latest
