@@ -386,7 +386,7 @@ class SecurityManager:
         self.mcp_servers: Dict[str, MCPServerConfig] = {}
         self._enabled_validation_tools: Dict[str, bool] = {
             "codeql": True,
-            "copilot_code_review": True,
+            "main_assistant_code_review": True,
             "secret_scanning": True,
             "dependency_checks": True,
         }
@@ -525,7 +525,7 @@ policies:
 # Validation Tools
 validation:
   codeql: true
-  copilot_code_review: true
+  main_assistant_code_review: true
   secret_scanning: true
   dependency_checks: true
 
@@ -1300,13 +1300,13 @@ The firewall system implements a whitelist-based approach:
 
 All agent-created changes go through:
 1. **CodeQL**: Static analysis for security vulnerabilities
-2. **Copilot Code Review**: AI-powered code quality review
+2. **Main Assistant Code Review**: AI-powered code quality review
 3. **Secret Scanning**: Detection of credentials and sensitive data
 4. **Dependency Checks**: Vulnerability scanning for new dependencies
 
-## Comparison with GitHub Copilot Cloud Agent
+## Comparison with GitHub Main Assistant Cloud Agent
 
-| Feature | GitHub Copilot | Mistral Cloud Agent |
+| Feature | GitHub Main Assistant | Mistral Cloud Agent |
 |---------|---------------|---------------------|
 | Task Delegation | Yes | Yes |
 | PR Workflow | Yes | Yes |
@@ -1316,13 +1316,13 @@ All agent-created changes go through:
 | Policy: Workflow Approval | Yes | Yes |
 | Policy: Automation Restrictions | Yes | Yes |
 | CodeQL Scanning | Yes | Yes |
-| Copilot Code Review | Yes | Yes (can use Mistral for review) |
+| Main Assistant Code Review | Yes | Yes (can use Mistral for review) |
 | Secret Scanning | Yes | Yes |
 | Dependency Checks | Yes | Yes |
 | MCP Support | Yes | Yes |
 | Custom MCP Servers | Yes | Yes |
 | Model | GitHub Models | Mistral Models |
-| Pricing | Copilot Pro+ | Mistral API |
+| Pricing | Main Assistant Pro+ | Mistral API |
 | Self-Hosting | No | Yes |
 | Open Source | No | Yes |
 
