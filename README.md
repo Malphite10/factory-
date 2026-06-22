@@ -47,8 +47,10 @@ Critical security gate in `.github/workflows/` enforcing:
 - ✓ 100% Deterministic execution.
 - ✓ Full audit traceability.
 
----
-
-Built with ❤️ by @Malphite10
-
-![Octocats High Five](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png) 🙌 🐱
+---Built with ❤️ by
+███    ███  █████  ██      ██████  ██   ██ ██ ████████ ███████  ██████
+████  ████ ██   ██ ██      ██   ██ ██   ██ ██    ██    ██      ██  ███
+██ ████ ██ ███████ ██      ██████  ███████ ██    ██    █████   ██ ██ ██
+██  ██  ██ ██   ██ ██      ██      ██   ██ ██    ██    ██      ████  ██
+██      ██ ██   ██ ███████ ██      ██   ██ ██    ██    ███████  ██████
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
