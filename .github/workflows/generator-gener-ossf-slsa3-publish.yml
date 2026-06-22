@@ -57,6 +57,7 @@ jobs:
   provenance:
     needs: [build]
     permissions:
+      id-token: write
       actions: read   # To read the workflow path.
       id-token: write # To sign the provenance.
       contents: write # To add assets to a release.

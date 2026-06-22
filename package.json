@@ -2,7 +2,7 @@
   "name": "multi-agent-system",
   "version": "1.0.0",
   "description": "Deterministic Multi-Agent Supply Chain System",
-  "author": "Jules (AI Supply Chain Agent)",
+  "author": "@Malphite10",
   "main": "index.js",
   "scripts": {
     "validate-schemas": "node scripts/validate.js --type schemas",

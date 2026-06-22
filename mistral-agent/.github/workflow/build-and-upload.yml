@@ -1,0 +1,13 @@
+name: Mistral Build and Upload
+on:
+  push:
+    branches: [main]
+jobs:
+  build-upload:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build
+        run: echo "Building Mistral Cloud Agent..."
+      - name: Upload
+        run: echo "Uploading artifacts to cloud..."

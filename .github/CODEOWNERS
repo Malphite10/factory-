@@ -1,16 +1,16 @@
 # Global owners
-* @AI-Supply-Chain-Lead
+* @Malphite10
 
 # Security & Governance
-/agents/05-github-supply-chain/ @Security-Agent
-/config/approved-sources.json @Security-Agent
-/governance/ @Security-Agent
+/agents/05-github-supply-chain/ @Malphite10
+/config/approved-sources.json @Malphite10
+/governance/ @Malphite10
 
 # Design & Frontend
-/agents/03-design/ @Design-Lead
-/design-system/ @Design-Lead
-/assets/ @Design-Lead
+/agents/03-design/ @Malphite10
+/design-system/ @Malphite10
+/assets/ @Malphite10
 
 # Integration & Ops
-/agents/07-integration/ @Ops-Agent
-/.github/workflows/ @Ops-Agent
+/agents/07-integration/ @Malphite10
+/.github/workflows/ @Malphite10
