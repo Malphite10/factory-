@@ -17,6 +17,7 @@
         "release_notes": { "type": "string" },
         "status": { "const": "ready-to-publish" }
 
+
         
   "title": "Launch Package (Launch Agent)",
   "type": "object",
@@ -90,13 +91,15 @@
       "type": "object",
       "properties": {
 
+
         "status": { "const": "COMPLETE" }
       }
     },
     "blockers": { "type": "array" }
   }
 }
-=======
+
+
         "status": {
           "const": "COMPLETE"
         }

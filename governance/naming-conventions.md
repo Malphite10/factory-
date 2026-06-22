@@ -1,7 +1,6 @@
 # Naming Conventions
 
 - **Agents**: `XX-name-in-kebab-case/agent.md`
-=======
 - **Agents**: `XX-name-in-kebab-case.md`
 - **Schemas**: `name-in-kebab-case.json`
 - **Workflows**: `XX-name-in-kebab-case.yml`
