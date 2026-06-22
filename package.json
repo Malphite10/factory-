@@ -7,6 +7,7 @@
     "validate-schemas": "node scripts/validate.js --type schemas",
     "validate-handoff": "node scripts/validate.js --type handoff",
     "audit-approved-sources": "node scripts/audit.js",
+    "audit-trail": "node scripts/audit-trail.js",
     "test-workflow": "node scripts/test-workflow.js"
   },
   "dependencies": {

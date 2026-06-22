@@ -1,83 +1,29 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Launch Package (Launch Agent)",
+  "title": "Launch Package",
   "type": "object",
-  "required": [
-    "agent",
-    "inputs",
-    "outputs",
-    "handoff",
-    "blockers"
-  ],
+  "required": ["agent", "outputs", "handoff", "blockers"],
   "properties": {
-    "agent": {
-      "const": "10-launch"
-    },
-    "version": {
-      "type": "string"
-    },
-    "timestamp": {
-      "type": "string",
-      "format": "date-time"
-    },
-    "inputs": {
-      "type": "object",
-      "required": [
-        "qa_sign_off",
-        "email_campaign"
-      ],
-      "properties": {
-        "qa_sign_off": {
-          "type": "object"
-        },
-        "email_campaign": {
-          "type": "object"
-        }
-      }
-    },
-    "tasks": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
-    },
+    "agent": { "const": "10-launch" },
     "outputs": {
       "type": "object",
-      "required": [
-        "live_url",
-        "seo_metadata",
-        "og_tags",
-        "release_notes"
-      ],
+      "required": ["version", "title", "description", "status"],
       "properties": {
-        "live_url": {
-          "type": "string",
-          "format": "uri"
-        },
-        "seo_metadata": {
-          "type": "object"
-        },
-        "og_tags": {
-          "type": "object"
-        },
-        "release_notes": {
-          "type": "string"
-        },
-        "monitoring_dashboards": {
-          "type": "array"
-        }
+        "version": { "type": "string" },
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "features": { "type": "array" },
+        "screenshots": { "type": "array" },
+        "release_notes": { "type": "string" },
+        "status": { "const": "ready-to-publish" }
       }
     },
     "handoff": {
       "type": "object",
       "properties": {
-        "status": {
-          "const": "COMPLETE"
-        }
+        "status": { "const": "COMPLETE" }
       }
     },
-    "blockers": {
-      "type": "array"
-    }
+    "blockers": { "type": "array" }
   }
 }

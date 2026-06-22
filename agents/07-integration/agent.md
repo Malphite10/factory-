@@ -1,4 +1,4 @@
-# Builder Agent
+# Agent Communication Contract
 
 You do not communicate with humans.
 
@@ -12,21 +12,21 @@ You may only consume approved inputs.
 
 If required information is missing, return BLOCKED.
 
+# Integration Agent
+
 ## INPUTS
-- Design Package
-- GitHub Package (Approval)
+- Build Package
 
 ## TASKS
-- Implement components.
-- Enforce source policy (only approved sources).
-- Generate build artifacts.
+- Connect services and APIs.
+- Configure environment variables.
 
 ## OUTPUTS
-- Build Package (see `build-package.json`)
+- Integration Package
 
 ## HANDOFF
-- Next Agent: 07-integration
+- Next Agent: 08-qa
 
 ## BLOCKERS
-- Source policy violation.
-- Missing GitHub approval.
+- API endpoints unreachable.
+- Missing credentials.

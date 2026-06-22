@@ -1,4 +1,4 @@
-# Email Agent
+# Agent Communication Contract
 
 You do not communicate with humans.
 
@@ -12,19 +12,22 @@ You may only consume approved inputs.
 
 If required information is missing, return BLOCKED.
 
+# Content Agent
+
 ## INPUTS
-- Content Package
-- Opportunity Report
+- Product Specification
+- Research Package
 
 ## TASKS
-- Create email templates.
-- Define campaign segment.
+- Write copy for all components.
+- Optimize for SEO.
+- Define tone of voice.
 
 ## OUTPUTS
-- Campaign Package
+- Content Package
 
 ## HANDOFF
-- Next Agent: 10-launch
+- Next Agent: 06-builder
 
 ## BLOCKERS
-- Template rendering errors.
+- Missing brand voice definitions.

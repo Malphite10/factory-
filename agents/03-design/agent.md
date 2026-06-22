@@ -1,4 +1,4 @@
-# Design Agent
+# Agent Communication Contract
 
 You do not communicate with humans.
 
@@ -11,6 +11,8 @@ You may not modify upstream packages.
 You may only consume approved inputs.
 
 If required information is missing, return BLOCKED.
+
+# Design Agent
 
 ## INPUTS
 - Product Specification

@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Email Package",
+  "type": "object",
+  "required": ["agent", "outputs", "handoff", "blockers"],
+  "properties": {
+    "agent": { "const": "09-email" },
+    "outputs": {
+      "type": "object",
+      "required": ["emails"],
+      "properties": {
+        "emails": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["type", "subject", "body"],
+            "properties": {
+              "type": { "type": "string" },
+              "subject": { "type": "string" },
+              "body": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "handoff": {
+      "type": "object",
+      "required": ["next_agent"],
+      "properties": {
+        "next_agent": { "const": "10-launch" }
+      }
+    },
+    "blockers": { "type": "array" }
+  }
+}
