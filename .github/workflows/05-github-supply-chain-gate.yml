@@ -6,10 +6,6 @@ on:
       - 'agents/handoffs/03-design.handoff.json'
   workflow_dispatch:
 
-permissions:
-  contents: read
-
-=======
 jobs:
   validate-supply-chain:
     runs-on: ubuntu-latest

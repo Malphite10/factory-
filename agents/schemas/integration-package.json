@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Integration Package",
+  "type": "object",
+  "required": ["agent", "outputs", "handoff", "blockers"],
+  "properties": {
+    "agent": { "const": "07-integration" },
+    "outputs": {
+      "type": "object",
+      "required": ["connected_services", "env_config"],
+      "properties": {
+        "connected_services": { "type": "array" },
+        "env_config": { "type": "object" },
+        "api_documentation": { "type": "string" }
+      }
+    },
+    "handoff": {
+      "type": "object",
+      "required": ["next_agent"],
+      "properties": {
+        "next_agent": { "const": "08-qa" }
+      }
+    },
+    "blockers": { "type": "array" }
+  }
+}

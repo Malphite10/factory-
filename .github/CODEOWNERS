@@ -1,0 +1,16 @@
+# Global owners
+* @AI-Supply-Chain-Lead
+
+# Security & Governance
+/agents/05-github-supply-chain/ @Security-Agent
+/config/approved-sources.json @Security-Agent
+/governance/ @Security-Agent
+
+# Design & Frontend
+/agents/03-design/ @Design-Lead
+/design-system/ @Design-Lead
+/assets/ @Design-Lead
+
+# Integration & Ops
+/agents/07-integration/ @Ops-Agent
+/.github/workflows/ @Ops-Agent

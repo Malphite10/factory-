@@ -6,18 +6,11 @@
 
 ```
 agents/
-
 ├── _shared/           # Mandatory Agent Communication Contract
 ├── XX-agent-name/     # Individual Agent Directories
 │   ├── agent.md       # Agent definition and rules
 │   └── skill.md       # Agent capabilities and output formats
 └── schemas/           # JSON schemas for all handoff packages
-=======
-├── schemas/           # JSON schemas for all handoff packages
-├── 00-creative-director.md
-├── ...
-└── 10-launch.md
-
 
 governance/            # Policies for dependencies, security, and naming
 evaluators/            # Evaluation templates for agent outputs
@@ -54,32 +47,9 @@ release/               # Checklists and changelog templates
 
 ## Critical Rules (Defined in `agents/_shared/agent-contract.md`)
 
-=======
-## Critical Rules
-
-Every agent must follow these non-negotiable rules:
 1. You do not communicate with humans.
 2. You communicate only through structured handoff packages.
 3. You may not skip required fields.
 4. You may not modify upstream packages.
 5. You may only consume approved inputs.
 6. If required information is missing, return BLOCKED.
-
-## Deterministic Handoff Flow
-
-1. **Creative Director** → Opportunity Report
-2. **Research** → Research Package
-3. **Product** → Product Spec
-4. **Design** → Design Package
-5. **GitHub Supply Chain** (Gatekeeper) ← Validates all dependencies
-6. **Builder** → Build Package
-7. **Integration** → Integration Package
-8. **QA** → QA Sign-Off
-9. **Email** → Campaign Package
-10. **Launch** → Launch Package
-
-## Success Metrics
-
-- **Zero supply-chain incidents**: All dependencies validated by the GitHub Supply Chain Agent.
-- **100% Audit Traceability**: Every decision logged with reasoning and timestamped.
-- **Deterministic Deployment**: Same input → same output, guaranteed.
