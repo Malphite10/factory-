@@ -44,7 +44,7 @@
     "current_stage", "current_agent", "status", "completed_stages",
     "artifacts", "errors", "scores", "metrics", "history"
   ]
-    }
-  },
+}
+{
   "required": ["project_id", "current_stage", "completed_stages", "artifacts", "errors", "scores"]
 }
