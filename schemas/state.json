@@ -12,7 +12,7 @@
     "current_agent": { "type": "string" },
     "next_agent": { "type": ["string", "null"] },
     "status": { "type": "string" },
-=======
+
     "current_stage": { "type": "string" },
     "completed_stages": {
       "type": "array",
@@ -44,7 +44,6 @@
     "current_stage", "current_agent", "status", "completed_stages",
     "artifacts", "errors", "scores", "metrics", "history"
   ]
-=======
     }
   },
   "required": ["project_id", "current_stage", "completed_stages", "artifacts", "errors", "scores"]
