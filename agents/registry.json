@@ -1,110 +1,17 @@
 {
-  "00-creative-director": {
-    "id": "00-creative-director",
-    "skill": "agents/00-creative-director/skill.md",
-    "agent": "agents/00-creative-director/agent.md",
-    "input_schema": null,
-    "output_schema": "opportunity-report.json",
-    "next": ["01-research"]
+  "strategy": {
+    "id": "strategy",
+    "name": "Strategy Agent",
+    "next": "open-design-core"
   },
-  "01-research": {
-    "id": "01-research",
-    "skill": "agents/01-research/skill.md",
-    "agent": "agents/01-research/agent.md",
-    "input_schema": "research-package.json",
-    "output_schema": "opportunity-report.json",
-    "next": ["02-product"]
+  "open-design-core": {
+    "id": "open-design-core",
+    "name": "Open Design Core Agent",
+    "next": "production"
   },
-  "02-product": {
-    "id": "02-product",
-    "skill": "agents/02-product/skill.md",
-    "agent": "agents/02-product/agent.md",
-    "input_schema": "opportunity-report.json",
-    "output_schema": "product-spec.json",
-    "next": ["03-design"]
-  },
-  "03-design": {
-    "id": "03-design",
-    "skill": "agents/03-design/skill.md",
-    "agent": "agents/03-design/agent.md",
-    "input_schema": "product-spec.json",
-    "output_schema": "design-package.json",
-    "next": ["04-content"]
-  },
-  "04-content": {
-    "id": "04-content",
-    "skill": "agents/04-content/skill.md",
-    "agent": "agents/04-content/agent.md",
-    "input_schema": "design-package.json",
-    "output_schema": "content-package.json",
-    "next": ["05-github-supply-chain"]
-  },
-  "05-github-supply-chain": {
-    "id": "05-github-supply-chain",
-    "skill": "agents/05-github-supply-chain/skill.md",
-    "agent": "agents/05-github-supply-chain/agent.md",
-    "input_schema": "content-package.json",
-    "output_schema": "github-package.json",
-    "next": ["06-builder"]
-  },
-  "06-builder": {
-    "id": "06-builder",
-    "skill": "agents/06-builder/skill.md",
-    "agent": "agents/06-builder/agent.md",
-    "input_schema": "github-package.json",
-    "output_schema": "build-package.json",
-    "next": ["07-integration"]
-  },
-  "07-integration": {
-    "id": "07-integration",
-    "skill": "agents/07-integration/skill.md",
-    "agent": "agents/07-integration/agent.md",
-    "input_schema": "build-package.json",
-    "output_schema": "integration-package.json",
-    "next": ["08-qa"]
-  },
-  "08-qa": {
-    "id": "08-qa",
-    "skill": "agents/08-qa/skill.md",
-    "agent": "agents/08-qa/agent.md",
-    "input_schema": "integration-package.json",
-    "output_schema": "qa-report.json",
-    "next": ["09-email"]
-  },
-  "09-email": {
-    "id": "09-email",
-    "skill": "agents/09-email/skill.md",
-    "agent": "agents/09-email/agent.md",
-    "input_schema": "qa-report.json",
-    "output_schema": "email-package.json",
-    "next": ["10-launch"]
-  },
-  "10-launch": {
-    "id": "10-launch",
-    "skill": "agents/10-launch/skill.md",
-    "agent": "agents/10-launch/agent.md",
-    "input_schema": "email-package.json",
-    "output_schema": "launch-package.json",
-    "next": ["11-memory"]
-  },
-  "11-memory": {
-    "id": "11-memory",
-    "skill": "agents/11-memory/skill.md",
-    "agent": "agents/11-memory/agent.md",
-    "input_schema": "launch-package.json",
-    "output_schema": "memory-report.json",
+  "production": {
+    "id": "production",
+    "name": "Production Agent",
     "next": null
   }
-
-  "00-creative-director": { "next": "01-research" },
-  "01-research": { "next": "02-product" },
-  "02-product": { "next": "03-design" },
-  "03-design": { "next": "04-content" },
-  "04-content": { "next": "05-github-supply-chain" },
-  "05-github-supply-chain": { "next": "06-builder" },
-  "06-builder": { "next": "07-integration" },
-  "07-integration": { "next": "08-qa" },
-  "08-qa": { "next": "09-email" },
-  "09-email": { "next": "10-launch" },
-  "10-launch": { "next": null }
 }

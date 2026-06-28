@@ -1,81 +1,330 @@
-# Multi-Agent Deterministic Handoff System
+# Open Design Template Factory
 
-**Owner**: @Malphite10
-**Status**: Production Agent Operating System 🟢
+## Overview
 
-A production-grade multi-agent orchestration framework with deterministic handoffs, a critical supply-chain gatekeeper, and a full-featured runtime execution engine.
+Open Design Template Factory is a deterministic AI-powered production system for creating marketplace-ready website templates for Wix Studio and Framer.
 
-## 2-Layer Architecture
+The system transforms:
+- Market opportunities
+- Figma design systems
+- GitHub component libraries
+- Internal template memory
 
-### 1. Private Core (Engine)
-- **Runtime Engine**: Python-based orchestrator, state manager, and execution graph.
-- **Agent Factory**: Machine-readable agent definitions (`agent.json`) and skills (`skill.md`).
-- **Deterministic State**: Resumable execution via `state.json` and structured artifacts.
+into production-ready template releases through a structured workflow.
 
-### 2. Public Layer (Products)
-- **Templates**: High-converting template DNA for SaaS, Agency, and AI Startups.
-- **Design System**: Registry of high-performance components and tokens.
-- **Marketplace Assets**: Ready-to-publish marketplace submission artifacts.
-
-## Quick Start
-
-```bash
-git clone https://github.com/@Malphite10/multi-agent-system.git
-cd multi-agent-system
-npm install
-PYTHONPATH=. python3 runtime/orchestrator.py --dry-run
-=======
-PYTHONPATH=. python3 runtime/orchestrator.py
-```
-
-## Core Components
-
-### Runtime State Machine
-The `runtime/` engine manages execution flow and artifact generation.
-- `orchestrator.py`: Coordinates the workflow.
-- `state.py`: Manages global state persistence.
-- `graph.py`: Defines the execution sequence.
-- `registry.py`: Loads agent metadata.
-
-### Supply Chain Gatekeeper
-=======
-### 1. Runtime State Machine
-The `runtime/` engine manages the execution flow, state transitions, and artifact generation.
-- `orchestrator.py`: Coordinates the multi-agent workflow.
-- `state.py`: Manages global state persistence.
-- `graph.py`: Defines the execution sequence.
-
-### 2. Deterministic Handoffs
-Every agent communicates via structured JSON packages validated against strict schemas in `agents/schemas/`.
-
-### 3. Supply Chain Gatekeeper
-Critical security gate in `.github/workflows/` enforcing:
-- ✅ Dependency license scans
-- ✅ SBOM generation (CycloneDX)
-- ✅ SLSA provenance
-- ✅ Signed releases
-
-## Repository Structure
-
-- `runtime/`: Execution engine and state management.
-- `agents/`: Agent specifications, skills, and central registry.
-- `schemas/`: Global state and handoff definitions.
-- `artifacts/`: Structured store for runs, snapshots, and security reports.
-- `design-system/`: Registry and design tokens.
-- `memory/`: Knowledge graph and marketplace intelligence.
+The objective is to maximize:
+- Production speed
+- Reusability
+- Design consistency
+- Marketplace acceptance
+- Long-term knowledge accumulation
 
 ---
 
-Built with by @Malphite10
+## Core Principles
 
-- `agents/`: Agent specifications, skills, and the central registry.
-- `schemas/`: Global state and handoff definitions.
-- `artifacts/`: Structured store for current runs, snapshots, and archives.
-- `design-system/`: Registry and design tokens.
-- `memory/`: Knowledge graph and marketplace intelligence.
+### Reuse Before Creation
 
-## Success Metrics
+Existing assets must always be evaluated before generating new assets.
 
-Zero supply-chain incidents.
-100% Deterministic execution.
-Full audit traceability.
+Priority order:
+1. Component Memory
+2. Template Memory
+3. Design System Library
+4. GitHub Component Library
+5. New Generation
+
+---
+
+### Marketplace First
+
+Every deliverable must satisfy:
+- Framer Marketplace requirements
+- Wix Studio Marketplace requirements
+
+unless explicitly overridden.
+
+---
+
+### Component First
+
+Templates are assembled from reusable components.
+Pages are compositions of components.
+Components are compositions of design tokens.
+
+---
+
+### Deterministic Execution
+
+All workflow stages must:
+- Accept structured input
+- Produce structured output
+- Follow documented contracts
+- Avoid hidden state
+
+---
+
+## Architecture
+
+```
+Sources
+│
+├── Figma
+├── GitHub
+├── Marketplace Research
+└── Internal Memory
+        │
+        ▼
+Strategy Layer
+        │
+        ▼
+Open Design Core
+        │
+        ▼
+Production Layer
+        │
+        ▼
+Marketplace Release
+```
+
+---
+
+## Workflow
+
+```
+Research
+    ↓
+Product Definition
+    ↓
+Design + Content
+    ↓
+Platform Adaptation
+    ↓
+Build
+    ↓
+Security
+    ↓
+QA
+    ↓
+Launch
+    ↓
+Memory Update
+```
+
+---
+
+## Repository Structure
+
+```
+open-design-template-factory/
+│
+├── README.md
+├── SKILL.md
+├── DESIGN.md
+│
+├── references/
+│   ├── model-routing.md
+│   ├── security-policy.md
+│   ├── recovery-rules.md
+│   ├── component-scoring.md
+│   ├── assets.md
+│   │
+│   ├── marketplaces/
+│   ├── imports/
+│   └── contracts/
+│
+├── workflows/
+│   ├── research.md
+│   ├── product.md
+│   ├── design.md
+│   ├── build.md
+│   ├── qa.md
+│   └── launch.md
+│
+├── memory/
+│   ├── components/
+│   ├── templates/
+│   ├── analytics/
+│   └── releases/
+│
+├── design-system/
+│   ├── tokens/
+│   ├── patterns/
+│   └── components/
+│
+├── prompts/
+│
+├── assets/
+│
+└── projects/
+```
+
+---
+
+## Agent Structure
+
+### Strategy Agent
+
+**Responsibilities:**
+- Market analysis
+- Opportunity identification
+- Product planning
+- Memory retrieval
+
+**Outputs:**
+- Opportunity Report
+- Product Specification
+
+---
+
+### Open Design Core Agent
+
+**Responsibilities:**
+- Figma ingestion
+- GitHub ingestion
+- Design systems
+- Content generation
+- Dependency validation
+- Platform adaptation
+
+**Outputs:**
+- Design Package
+- Content Package
+- Platform Mapping
+- Dependency Manifest
+
+---
+
+### Production Agent
+
+**Responsibilities:**
+- Template assembly
+- Security validation
+- Quality assurance
+- Marketplace packaging
+
+**Outputs:**
+- Build Package
+- QA Report
+- Marketplace Package
+- Release Notes
+
+---
+
+## Memory System
+
+### Component Memory
+
+Stores reusable:
+- Hero sections
+- Pricing sections
+- Feature sections
+- Testimonials
+- FAQs
+- Footers
+- Navigation systems
+
+---
+
+### Template Memory
+
+Stores successful templates.
+
+Examples:
+- SaaS
+- Agency
+- Startup
+- Portfolio
+- Creator
+- E-Commerce
+
+---
+
+### Analytics Memory
+
+Tracks:
+- Best-selling categories
+- Best-performing layouts
+- Conversion patterns
+- Marketplace trends
+
+---
+
+## Design System
+
+The design system is the canonical source of visual truth.
+
+Includes:
+- Colors
+- Typography
+- Spacing
+- Radius
+- Shadows
+- Motion
+- Components
+
+All templates must derive from the design system.
+
+---
+
+## Quality Standards
+
+Every release must pass:
+
+### Accessibility
+- Semantic structure
+- Keyboard navigation
+- Color contrast
+- Responsive layouts
+
+### Performance
+- Fast loading
+- Optimized assets
+- Minimal dependencies
+
+### Security
+- No secrets
+- No unsafe dependencies
+- No exposed credentials
+
+### Marketplace
+- Listing requirements
+- Asset requirements
+- Submission requirements
+
+---
+
+## Versioning
+
+Version format:
+`MAJOR.MINOR.PATCH`
+
+Examples:
+- 1.0.0
+- 1.1.0
+- 2.0.0
+
+Every release must include:
+- Changelog
+- Release Notes
+- QA Results
+
+---
+
+## Success Criteria
+
+A template is considered complete when:
+- Product requirements are satisfied
+- Design system compliance is verified
+- QA passes
+- Security passes
+- Marketplace package is generated
+- Release documentation is generated
+
+Only then may the template be released.
+
+---
+
+## Mission
+
+Build a repeatable system that transforms ideas, design assets, and reusable knowledge into high-quality marketplace templates with minimal manual intervention while continuously improving through accumulated memory and analytics.

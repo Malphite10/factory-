@@ -2,7 +2,6 @@ import json
 import os
 from datetime import datetime
 import uuid
-=======
 from typing import Dict, List, Any
 
 class StateManager:
@@ -36,17 +35,6 @@ class StateManager:
 
     def save_state(self):
         self.state["updated_at"] = datetime.utcnow().isoformat() + "Z"
-=======
-        return {
-            "project_id": "",
-            "current_stage": "idle",
-            "completed_stages": [],
-            "artifacts": {},
-            "errors": [],
-            "scores": {}
-        }
-
-    def save_state(self):
         os.makedirs(os.path.dirname(self.state_path), exist_ok=True)
         with open(self.state_path, 'w') as f:
             json.dump(self.state, f, indent=2)
@@ -57,6 +45,8 @@ class StateManager:
             "to": agent_id,
             "timestamp": datetime.utcnow().isoformat() + "Z"
         }
+        if "history" not in self.state:
+            self.state["history"] = []
         self.state["history"].append(entry)
         self.state["current_agent"] = agent_id
         self.state["current_stage"] = agent_id
@@ -67,7 +57,8 @@ class StateManager:
 
     def update_status(self, status: str):
         self.state["status"] = status
-=======
+        self.save_state()
+
     def update_stage(self, stage: str):
         self.state["current_stage"] = stage
         if stage not in self.state["completed_stages"] and stage != "idle":
@@ -81,7 +72,6 @@ class StateManager:
     def add_error(self, error: str):
         self.state["errors"].append(error)
         self.save_state()
-=======
 
     def update_score(self, key: str, value: float):
         self.state["scores"][key] = value
