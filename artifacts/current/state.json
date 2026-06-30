@@ -8,9 +8,6 @@
   "current_agent": "11-memory",
   "next_agent": null,
   "status": "COMPLETED",
-=======
-  "project_id": "",
-  "current_stage": "10-launch",
   "completed_stages": [
     "00-creative-director",
     "01-research",
@@ -24,238 +21,23 @@
     "09-email",
     "10-launch",
     "11-memory"
-    "10-launch"
   ],
   "artifacts": {
-    "00-creative-director_handoff": {
-      "status": "SUCCESS",
-      "mode": "dry-run"
-    },
-    "01-research_handoff": {
-      "status": "SUCCESS",
-      "mode": "dry-run"
-    },
-    "02-product_handoff": {
-      "status": "SUCCESS",
-      "mode": "dry-run"
-    },
-    "03-design_handoff": {
-      "status": "SUCCESS",
-      "mode": "dry-run"
-    },
-    "04-content_handoff": {
-      "status": "SUCCESS",
-      "mode": "dry-run"
-    },
-    "05-github-supply-chain_handoff": {
-      "status": "SUCCESS",
-      "mode": "dry-run"
-    },
-    "06-builder_handoff": {
-      "status": "SUCCESS",
-      "mode": "dry-run"
-    },
-    "07-integration_handoff": {
-      "status": "SUCCESS",
-      "mode": "dry-run"
-    },
-    "08-qa_handoff": {
-      "status": "SUCCESS",
-      "mode": "dry-run"
-    },
-    "09-email_handoff": {
-      "status": "SUCCESS",
-      "mode": "dry-run"
-    },
-    "10-launch_handoff": {
-      "status": "SUCCESS",
-      "mode": "dry-run"
-    },
-    "11-memory_handoff": {
-      "status": "SUCCESS",
-      "mode": "dry-run"
-    }
+    "00-creative-director_handoff": { "status": "SUCCESS", "mode": "dry-run" },
+    "01-research_handoff": { "status": "SUCCESS", "mode": "dry-run" },
+    "02-product_handoff": { "status": "SUCCESS", "mode": "dry-run" },
+    "03-design_handoff": { "status": "SUCCESS", "mode": "dry-run" },
+    "04-content_handoff": { "status": "SUCCESS", "mode": "dry-run" },
+    "05-github-supply-chain_handoff": { "status": "SUCCESS", "mode": "dry-run" },
+    "06-builder_handoff": { "status": "SUCCESS", "mode": "dry-run" },
+    "07-integration_handoff": { "status": "SUCCESS", "mode": "dry-run" },
+    "08-qa_handoff": { "status": "SUCCESS", "mode": "dry-run" },
+    "09-email_handoff": { "status": "SUCCESS", "mode": "dry-run" },
+    "10-launch_handoff": { "status": "SUCCESS", "mode": "dry-run" },
+    "11-memory_handoff": { "status": "SUCCESS", "mode": "dry-run" }
   },
   "errors": [],
   "scores": {},
   "metrics": {},
-  "history": [
-    {
-      "from": "idle",
-      "to": "00-creative-director",
-      "timestamp": "2026-06-22T02:33:03.051602Z"
-    },
-    {
-      "from": "00-creative-director",
-      "to": "01-research",
-      "timestamp": "2026-06-22T02:33:03.152618Z"
-    },
-    {
-      "from": "01-research",
-      "to": "02-product",
-      "timestamp": "2026-06-22T02:33:03.254359Z"
-    },
-    {
-      "from": "02-product",
-      "to": "03-design",
-      "timestamp": "2026-06-22T02:33:03.356262Z"
-    },
-    {
-      "from": "03-design",
-      "to": "04-content",
-      "timestamp": "2026-06-22T02:33:03.458088Z"
-    },
-    {
-      "from": "04-content",
-      "to": "05-github-supply-chain",
-      "timestamp": "2026-06-22T02:33:03.560425Z"
-    },
-    {
-      "from": "05-github-supply-chain",
-      "to": "06-builder",
-      "timestamp": "2026-06-22T02:33:03.661631Z"
-    },
-    {
-      "from": "06-builder",
-      "to": "07-integration",
-      "timestamp": "2026-06-22T02:33:03.763437Z"
-    },
-    {
-      "from": "07-integration",
-      "to": "08-qa",
-      "timestamp": "2026-06-22T02:33:03.865232Z"
-    },
-    {
-      "from": "08-qa",
-      "to": "09-email",
-      "timestamp": "2026-06-22T02:33:03.966875Z"
-    },
-    {
-      "from": "09-email",
-      "to": "10-launch",
-      "timestamp": "2026-06-22T02:33:04.068489Z"
-    },
-    {
-      "from": "10-launch",
-      "to": "11-memory",
-      "timestamp": "2026-06-22T02:33:04.170292Z"
-    },
-    {
-      "from": "11-memory",
-      "to": "00-creative-director",
-      "timestamp": "2026-06-22T02:42:49.017050Z"
-    },
-    {
-      "from": "00-creative-director",
-      "to": "01-research",
-      "timestamp": "2026-06-22T02:42:49.118577Z"
-    },
-    {
-      "from": "01-research",
-      "to": "02-product",
-      "timestamp": "2026-06-22T02:42:49.220195Z"
-    },
-    {
-      "from": "02-product",
-      "to": "03-design",
-      "timestamp": "2026-06-22T02:42:49.321976Z"
-    },
-    {
-      "from": "03-design",
-      "to": "04-content",
-      "timestamp": "2026-06-22T02:42:49.423833Z"
-    },
-    {
-      "from": "04-content",
-      "to": "05-github-supply-chain",
-      "timestamp": "2026-06-22T02:42:49.525480Z"
-    },
-    {
-      "from": "05-github-supply-chain",
-      "to": "06-builder",
-      "timestamp": "2026-06-22T02:42:49.627634Z"
-    },
-    {
-      "from": "06-builder",
-      "to": "07-integration",
-      "timestamp": "2026-06-22T02:42:49.728993Z"
-    },
-    {
-      "from": "07-integration",
-      "to": "08-qa",
-      "timestamp": "2026-06-22T02:42:49.830871Z"
-    },
-    {
-      "from": "08-qa",
-      "to": "09-email",
-      "timestamp": "2026-06-22T02:42:49.932680Z"
-    },
-    {
-      "from": "09-email",
-      "to": "10-launch",
-      "timestamp": "2026-06-22T02:42:50.034527Z"
-    },
-    {
-      "from": "10-launch",
-      "to": "11-memory",
-      "timestamp": "2026-06-22T02:42:50.136270Z"
-    }
-  ]
-=======
-      "agent": "00-creative-director",
-      "output": "Mock output from 00-creative-director"
-    },
-    "01-research_handoff": {
-      "status": "SUCCESS",
-      "agent": "01-research",
-      "output": "Mock output from 01-research"
-    },
-    "02-product_handoff": {
-      "status": "SUCCESS",
-      "agent": "02-product",
-      "output": "Mock output from 02-product"
-    },
-    "03-design_handoff": {
-      "status": "SUCCESS",
-      "agent": "03-design",
-      "output": "Mock output from 03-design"
-    },
-    "04-content_handoff": {
-      "status": "SUCCESS",
-      "agent": "04-content",
-      "output": "Mock output from 04-content"
-    },
-    "05-github-supply-chain_handoff": {
-      "status": "SUCCESS",
-      "agent": "05-github-supply-chain",
-      "output": "Mock output from 05-github-supply-chain"
-    },
-    "06-builder_handoff": {
-      "status": "SUCCESS",
-      "agent": "06-builder",
-      "output": "Mock output from 06-builder"
-    },
-    "07-integration_handoff": {
-      "status": "SUCCESS",
-      "agent": "07-integration",
-      "output": "Mock output from 07-integration"
-    },
-    "08-qa_handoff": {
-      "status": "SUCCESS",
-      "agent": "08-qa",
-      "output": "Mock output from 08-qa"
-    },
-    "09-email_handoff": {
-      "status": "SUCCESS",
-      "agent": "09-email",
-      "output": "Mock output from 09-email"
-    },
-    "10-launch_handoff": {
-      "status": "SUCCESS",
-      "agent": "10-launch",
-      "output": "Mock output from 10-launch"
-    }
-  },
-  "errors": [],
-  "scores": {}
+  "history": []
 }

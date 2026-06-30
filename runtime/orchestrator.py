@@ -18,15 +18,6 @@ class Orchestrator:
         print(f"Starting Orchestrator in {mode} mode...")
         self.state_manager.update_status(f"RUNNING_{mode}")
 
-=======
-    def __init__(self):
-        self.state_manager = StateManager()
-        self.registry = AgentRegistry()
-        self.graph = ExecutionGraph(self.registry)
-        self.executor = AgentExecutor(self.state_manager)
-
-    def run(self):
-        print("Starting Orchestrator...")
         execution_order = self.graph.get_execution_order()
 
         current_input = {}
@@ -53,16 +44,4 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     orchestrator = Orchestrator(dry_run=args.dry_run)
-
-            result = self.executor.execute(agent_id, current_input)
-            if result.get("status") != "SUCCESS":
-                print(f"Agent {agent_id} failed. Stopping execution.")
-                self.state_manager.add_error(f"{agent_id} failed")
-                break
-            current_input = result
-
-        print("Workflow completed.")
-
-if __name__ == "__main__":
-    orchestrator = Orchestrator()
     orchestrator.run()

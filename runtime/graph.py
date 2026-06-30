@@ -1,5 +1,3 @@
-from typing import List, Optional
-=======
 from typing import List, Dict, Any
 from runtime.registry import AgentRegistry
 
@@ -20,9 +18,4 @@ class ExecutionGraph:
                 next_agents = self.registry.get_next_agents(current)
                 if next_agents:
                     stack.extend(next_agents)
-=======
-        current = start_node
-        while current:
-            order.append(current)
-            current = self.registry.get_next_agent(current)
         return order

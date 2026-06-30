@@ -95,16 +95,4 @@
     "output_schema": "memory-report.json",
     "next": null
   }
-
-  "00-creative-director": { "next": "01-research" },
-  "01-research": { "next": "02-product" },
-  "02-product": { "next": "03-design" },
-  "03-design": { "next": "04-content" },
-  "04-content": { "next": "05-github-supply-chain" },
-  "05-github-supply-chain": { "next": "06-builder" },
-  "06-builder": { "next": "07-integration" },
-  "07-integration": { "next": "08-qa" },
-  "08-qa": { "next": "09-email" },
-  "09-email": { "next": "10-launch" },
-  "10-launch": { "next": null }
 }

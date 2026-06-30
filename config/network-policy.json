@@ -1,0 +1,17 @@
+{
+  "default_allowlist": [
+    "github.com",
+    "githubusercontent.com",
+    "npmjs.com",
+    "registry.npmjs.org",
+    "pypi.org",
+    "files.pythonhosted.org",
+    "pypi.python.org"
+  ],
+  "custom_allowlist": [],
+  "denylist": [],
+  "pattern_matching": {
+    "wildcards_supported": true,
+    "example": "*.company.com"
+  }
+}

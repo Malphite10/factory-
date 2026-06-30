@@ -1,0 +1,20 @@
+[project]
+name = "mistral-vibe"
+version = "1.0.0"
+description = "Mistral Vibe - Main Assistant"
+requires-python = ">=3.12"
+dependencies = [
+    "httpx",
+    "pydantic",
+    "python-dotenv",
+    "pytest",
+]
+
+[project.scripts]
+vibe = "vibe.cli.main:main"
+
+[tool.setuptools]
+packages = ["vibe", "runtime"]
+
+[tool.uv]
+package = true

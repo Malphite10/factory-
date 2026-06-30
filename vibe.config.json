@@ -1,0 +1,18 @@
+{
+  "agent_name": "Main Assistant",
+  "mode": "cloud",
+  "cloud": {
+    "provider": "mistral",
+    "model": "mistral-large-latest",
+    "api_key_env": "MISTRAL_API_KEY"
+  },
+  "local": {
+    "provider": "ollama",
+    "model": "mistral",
+    "endpoint": "http://localhost:11434"
+  },
+  "firewall": {
+    "enabled": true,
+    "policy_file": "config/network-policy.json"
+  }
+}

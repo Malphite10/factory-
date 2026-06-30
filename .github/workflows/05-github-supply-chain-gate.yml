@@ -49,12 +49,10 @@ jobs:
 
       - name: 1. Dependency Review & License Scan
         run: |
-          echo "Scanning for licenses..."
-          echo '{"status": "PASSED", "licenses": ["MIT", "Apache-2.0"]}' > artifacts/security/license-report.json
-=======
           echo "Checking against approved-sources.json and license allowlist..."
           node scripts/validate.js --type schemas
           # Mock license scan
+          echo '{"status": "PASSED", "licenses": ["MIT", "Apache-2.0"]}' > artifacts/security/license-report.json
           echo "License scan passed."
 
       - name: 2. Security Scan
@@ -76,26 +74,6 @@ jobs:
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |
           echo "Creating signed release..."
-
-      - name: 6. Approval Decision
-        if: success()
-        run: |
-          echo "All checks passed."
-
-        run: |
-          echo "Generating CycloneDX SBOM..."
-          # npx @cyclonedx/cyclonedx-npm --output-file bom.json
-
-      - name: 4. SLSA Provenance Generation
-        run: |
-          echo "Generating SLSA provenance..."
-          # Mock SLSA generation logic
-
-      - name: 5. Signed Release
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        run: |
-          echo "Creating signed release..."
-          # Logic to sign and release artifacts
 
       - name: 6. Approval Decision
         if: success()

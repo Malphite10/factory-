@@ -1,0 +1,13 @@
+{
+  "servers": {
+    "default": {
+      "env": {
+        "API_KEY": "REDACTED_FROM_ENV",
+        "DATABASE_URL": "REDACTED_FROM_ENV"
+      },
+      "allowlist": [
+        "api.example.com"
+      ]
+    }
+  }
+}

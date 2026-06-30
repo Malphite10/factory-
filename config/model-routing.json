@@ -11,16 +11,4 @@
   "09-email": { "primary": "mistral-large-latest", "fallback": "claude-3-5-sonnet" },
   "10-launch": { "primary": "gpt-4o", "fallback": "claude-3-5-sonnet" },
   "11-memory": { "primary": "claude-3-5-sonnet", "fallback": "mistral-large-latest" }
-=======
-  "00-creative-director": "claude-3-5-sonnet",
-  "01-research": "mistral-large-latest",
-  "02-product": "gpt-4o",
-  "03-design": "claude-3-5-sonnet",
-  "04-content": "mistral-large-latest",
-  "05-github-supply-chain": "gpt-4o",
-  "06-builder": "claude-3-5-sonnet",
-  "07-integration": "gpt-4o",
-  "08-qa": "claude-3-5-sonnet",
-  "09-email": "mistral-large-latest",
-  "10-launch": "gpt-4o"
 }

@@ -1,8 +1,6 @@
 import json
 import os
-from typing import Dict, Any, Optional
-
-from typing import Dict, Any
+from typing import Dict, Any, Optional, List
 
 class AgentRegistry:
     def __init__(self, registry_path: str = "agents/registry.json"):
@@ -18,7 +16,17 @@ class AgentRegistry:
     def get_agent_info(self, agent_id: str) -> Dict[str, Any]:
         return self.registry.get(agent_id, {})
 
-    def get_next_agents(self, current_agent: str) -> Optional[list]:
+    def get_next_agents(self, current_agent: str) -> Optional[List[str]]:
+        agent_info = self.get_agent_info(current_agent)
+        next_val = agent_info.get("next")
+        if next_val is None:
+            return None
+        if isinstance(next_val, list):
+            return next_val
+        return [next_val]
 
-    def get_next_agent(self, current_agent: str) -> str:
-        return self.get_agent_info(current_agent).get("next")
+    def get_next_agent(self, current_agent: str) -> Optional[str]:
+        next_agents = self.get_next_agents(current_agent)
+        if next_agents:
+            return next_agents[0]
+        return None
