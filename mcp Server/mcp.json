@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "my_custom_server": {
+      "command": "node",
+      "args": ["/path/to/server.js", "--port", "8080"],
+      "env": {
+        "API_KEY": "${{ secrets.API_KEY }}",
+        "DEBUG": "true"
+      }
+    },
+    "python_tool_server": {
+      "command": "python3",
+      "args": ["/path/to/tool_server.py"],
+      "env": {
+        "DB_URL": "${{ secrets.DB_URL }}"
+      }
+    }
+  }
+}
