@@ -1,81 +1,66 @@
-# Multi-Agent Deterministic Handoff System
+# Open Design Template Factory
 
-**Owner**: @Malphite10
-**Status**: Production Agent Operating System 🟢
+Deterministic AI-powered production system for marketplace-ready website templates. Powered by **Mistral Vibe**.
 
-A production-grade multi-agent orchestration framework with deterministic handoffs, a critical supply-chain gatekeeper, and a full-featured runtime execution engine.
+## Overview
 
-## 2-Layer Architecture
+Open Design Template Factory transforms market opportunities, design systems, and component libraries into production-ready template releases through a structured, multi-agent workflow.
 
-### 1. Private Core (Engine)
-- **Runtime Engine**: Python-based orchestrator, state manager, and execution graph.
-- **Agent Factory**: Machine-readable agent definitions (`agent.json`) and skills (`skill.md`).
-- **Deterministic State**: Resumable execution via `state.json` and structured artifacts.
+## Architecture
 
-### 2. Public Layer (Products)
-- **Templates**: High-converting template DNA for SaaS, Agency, and AI Startups.
-- **Design System**: Registry of high-performance components and tokens.
-- **Marketplace Assets**: Ready-to-publish marketplace submission artifacts.
+Built on the **Mistral Vibe** engine:
+- `vibe/core`: Orchestration, State Management, and Agent Execution.
+- `vibe/cli`: Interactive management interface.
+- `vibe/acp`: Agent Client Protocol bridge.
 
-## Quick Start
+### Agent Pipeline
 
-```bash
-git clone https://github.com/@Malphite10/multi-agent-system.git
-cd multi-agent-system
-npm install
-PYTHONPATH=. python3 runtime/orchestrator.py --dry-run
-=======
-PYTHONPATH=. python3 runtime/orchestrator.py
-```
-
-## Core Components
-
-### Runtime State Machine
-The `runtime/` engine manages execution flow and artifact generation.
-- `orchestrator.py`: Coordinates the workflow.
-- `state.py`: Manages global state persistence.
-- `graph.py`: Defines the execution sequence.
-- `registry.py`: Loads agent metadata.
-
-### Supply Chain Gatekeeper
-=======
-### 1. Runtime State Machine
-The `runtime/` engine manages the execution flow, state transitions, and artifact generation.
-- `orchestrator.py`: Coordinates the multi-agent workflow.
-- `state.py`: Manages global state persistence.
-- `graph.py`: Defines the execution sequence.
-
-### 2. Deterministic Handoffs
-Every agent communicates via structured JSON packages validated against strict schemas in `agents/schemas/`.
-
-### 3. Supply Chain Gatekeeper
-Critical security gate in `.github/workflows/` enforcing:
-- ✅ Dependency license scans
-- ✅ SBOM generation (CycloneDX)
-- ✅ SLSA provenance
-- ✅ Signed releases
+1. **Strategy Agent**: Market analysis and product planning.
+2. **Open Design Core Agent**: Design ingestion and platform adaptation.
+3. **Production Agent**: Template assembly and quality assurance.
 
 ## Repository Structure
 
-- `runtime/`: Execution engine and state management.
-- `agents/`: Agent specifications, skills, and central registry.
-- `schemas/`: Global state and handoff definitions.
-- `artifacts/`: Structured store for runs, snapshots, and security reports.
-- `design-system/`: Registry and design tokens.
-- `memory/`: Knowledge graph and marketplace intelligence.
+```
+open-design-template-factory/
+├── vibe/               # Mistral Vibe Core Engine
+│   ├── core/           # Orchestration & Logic
+│   ├── cli/            # TUI Components
+│   ├── acp/            # Protocol Bridge
+│   └── setup/          # Configuration Wizards
+├── agents/             # Agent definitions & schemas
+├── design-system/      # Canonical design tokens & components
+├── memory/             # Knowledge graph & analytics
+├── workflows/          # Structured process definitions
+├── references/         # Standards & policies
+├── projects/           # Active template projects
+└── AGENTS.md           # Engineering conventions
+```
+
+## Getting Started
+
+### Prerequisites
+- Python 3.12+
+- [uv](https://github.com/astral-sh/uv)
+
+### Installation
+```bash
+uv sync
+```
+
+### Running the Orchestrator
+```bash
+uv run python -m vibe.core.orchestrator --dry-run
+```
+
+## Engineering Standards
+
+We follow strict Mistral Vibe conventions. See [AGENTS.md](AGENTS.md) for details on:
+- Command usage via `uv`
+- Python 3.12+ style (match/case, modern type hints)
+- Absolute imports
+- Pydantic for data validation
 
 ---
 
 Built with by @Malphite10
-
-- `agents/`: Agent specifications, skills, and the central registry.
-- `schemas/`: Global state and handoff definitions.
-- `artifacts/`: Structured store for current runs, snapshots, and archives.
-- `design-system/`: Registry and design tokens.
-- `memory/`: Knowledge graph and marketplace intelligence.
-
-## Success Metrics
-
-Zero supply-chain incidents.
-100% Deterministic execution.
-Full audit traceability.

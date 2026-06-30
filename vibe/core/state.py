@@ -1,21 +1,21 @@
 import json
-import os
-from datetime import datetime
+from datetime import datetime, UTC
 import uuid
-=======
-from typing import Dict, List, Any
+from pathlib import Path
+from typing import Any
+
 
 class StateManager:
     def __init__(self, state_path: str = "artifacts/current/state.json"):
-        self.state_path = state_path
+        self.state_path = Path(state_path)
         self.state = self._load_state()
 
-    def _load_state(self) -> Dict[str, Any]:
-        if os.path.exists(self.state_path):
-            with open(self.state_path, 'r') as f:
+    def _load_state(self) -> dict[str, Any]:
+        if self.state_path.exists():
+            with self.state_path.open("r") as f:
                 return json.load(f)
 
-        now = datetime.utcnow().isoformat() + "Z"
+        now = datetime.now(UTC).isoformat() + "Z"
         return {
             "project_id": "default",
             "run_id": str(uuid.uuid4()),
@@ -31,32 +31,23 @@ class StateManager:
             "errors": [],
             "scores": {},
             "metrics": {},
-            "history": []
+            "history": [],
         }
 
     def save_state(self):
-        self.state["updated_at"] = datetime.utcnow().isoformat() + "Z"
-=======
-        return {
-            "project_id": "",
-            "current_stage": "idle",
-            "completed_stages": [],
-            "artifacts": {},
-            "errors": [],
-            "scores": {}
-        }
-
-    def save_state(self):
-        os.makedirs(os.path.dirname(self.state_path), exist_ok=True)
-        with open(self.state_path, 'w') as f:
+        self.state["updated_at"] = datetime.now(UTC).isoformat() + "Z"
+        self.state_path.parent.mkdir(parents=True, exist_ok=True)
+        with self.state_path.open("w") as f:
             json.dump(self.state, f, indent=2)
 
-    def transition_to(self, agent_id: str, next_agent: str = None):
+    def transition_to(self, agent_id: str, next_agent: str | None = None):
         entry = {
             "from": self.state["current_agent"],
             "to": agent_id,
-            "timestamp": datetime.utcnow().isoformat() + "Z"
+            "timestamp": datetime.now(UTC).isoformat() + "Z",
         }
+        if "history" not in self.state:
+            self.state["history"] = []
         self.state["history"].append(entry)
         self.state["current_agent"] = agent_id
         self.state["current_stage"] = agent_id
@@ -67,7 +58,8 @@ class StateManager:
 
     def update_status(self, status: str):
         self.state["status"] = status
-=======
+        self.save_state()
+
     def update_stage(self, stage: str):
         self.state["current_stage"] = stage
         if stage not in self.state["completed_stages"] and stage != "idle":
@@ -81,7 +73,6 @@ class StateManager:
     def add_error(self, error: str):
         self.state["errors"].append(error)
         self.save_state()
-=======
 
     def update_score(self, key: str, value: float):
         self.state["scores"][key] = value

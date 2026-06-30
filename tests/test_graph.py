@@ -1,15 +1,12 @@
-from runtime.graph import ExecutionGraph
-from runtime.registry import AgentRegistry
 import json
+from vibe.core.registry import AgentRegistry
+from vibe.core.graph import ExecutionGraph
+
 
 def test_execution_order(tmp_path):
     reg_file = tmp_path / "registry.json"
-    data = {
-        "A": {"next": ["B"]},
-        "B": {"next": ["C"]},
-        "C": {"next": None}
-    }
-    with open(reg_file, 'w') as f:
+    data = {"A": {"next": "B"}, "B": {"next": "C"}, "C": {"next": None}}
+    with open(reg_file, "w") as f:
         json.dump(data, f)
 
     registry = AgentRegistry(registry_path=str(reg_file))

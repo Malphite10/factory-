@@ -1,13 +1,11 @@
-from typing import List, Optional
-=======
-from typing import List, Dict, Any
-from runtime.registry import AgentRegistry
+from vibe.core.registry import AgentRegistry
+
 
 class ExecutionGraph:
     def __init__(self, registry: AgentRegistry):
         self.registry = registry
 
-    def get_execution_order(self, start_node: str = "00-creative-director") -> List[str]:
+    def get_execution_order(self, start_node: str = "strategy") -> list[str]:
         order = []
         visited = set()
         stack = [start_node]
@@ -20,9 +18,4 @@ class ExecutionGraph:
                 next_agents = self.registry.get_next_agents(current)
                 if next_agents:
                     stack.extend(next_agents)
-=======
-        current = start_node
-        while current:
-            order.append(current)
-            current = self.registry.get_next_agent(current)
         return order
