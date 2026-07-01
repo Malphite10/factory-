@@ -19,3 +19,9 @@ The firewall system implements a whitelist-based approach for all agent activiti
 1. **Environment Variables**: Sensitive configuration must be managed via environment variables. Never hardcode secrets.
 2. **Secret Scanning**: Automatic scanning of all changes for accidentally committed secrets is enforced via Gitleaks in CI.
 3. **MCP Server Secrets**: MCP servers access repository secrets through environment variables injected at runtime.
+
+## Policy Enforcement
+
+1. **Workflow Approval**: Requires manual approval before Actions workflows run on agent-created PRs. This is enforced through GitHub Environment protection rules.
+2. **Automation Restrictions**: Prevents automations from being triggered by users without write access to the repository.
+3. **MCP Server Isolation**: Each MCP server is isolated and restricted to its own network allowlist as defined in the server configuration.
